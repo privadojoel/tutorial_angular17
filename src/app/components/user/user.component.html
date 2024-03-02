@@ -1,0 +1,27 @@
+<section>
+    <p>Hola {{usersame}}</p>
+    @if (doesUserExists) {
+        <p>Usuario Existe</p>
+    }@else {
+        <p>Usuario no Existe</p>
+    }
+    
+</section>
+<section>
+    <h2>Lista de Sistemas Operativos</h2>
+    <ul>
+        @for (os of operatingSystem; track os.id) {
+            <li (mouseover)="onMouseOver(os.name)" >{{os.name | uppercase}}</li>
+        }
+    </ul>
+</section>
+<section>
+    <div class="editable-div" [contentEditable]="isEditable"></div>
+</section>
+<section>
+    Mi ocupacion es : {{occupation}}
+</section>
+<section>
+    <button (click)="emitToParent()">Message</button>
+</section>
+

@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li>
+            <a routerLink="/" >Home</a>
+        </li>        
+        <li>
+            <a routerLink="/blog-post" >Blog</a>
+        </li>
+        <li>
+            <a routerLink="/contact" >Contacto</a>
+        </li>        
+    </ul>
+</nav>
+<section>
+    <p>Hello From  {{city}} {{1+1}}</p>
+    <user-component [occupation]="userOcuppation" (greet)="receiveEmision($event)"></user-component>
+    <p>Mensaje del Child componente {{childMessageEvent}}</p>
+</section>
+
+
+<router-outlet />
